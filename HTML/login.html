@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Luxe Salon Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&family=Girassol&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* ===== PAGE ===== */
+body {
+    margin: 0;
+    height: 100vh;
+    background: #2b0f18;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Epilogue', sans-serif;
+}
+
+/* ===== CARD ===== */
+.login-box {
+    position: relative;
+    width: 900px;
+    min-height: 500px;
+    padding: 40px 20px;
+    background: #d68aa3;
+    border-radius: 25px;
+    border: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+}
+
+/* HEADER */
+.login-header {
+    font-weight: 900;
+    color: #E8306E;
+}
+
+/* TITLE */
+.login-box h1 {
+    font-family: 'Girassol', serif;
+    font-size: 48px;
+    margin: 0;
+}
+
+/* SUB */
+.login-sub {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* INPUT */
+.login-input {
+ width: 100%;
+max-width: 450px;
+    height: 60px;
+    border-radius: 20px;
+    border: 2px solid #E8306E;
+    padding: 0 20px;
+    font-size: 18px;
+    background: transparent;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    background: transparent;
+    border: none;
+      z-index: 10;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+
+    cursor: pointer;
+}
+
+/* BUTTON */
+.login-btn {
+    width: 450px;
+    height: 65px;
+    background: #E8306E;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* OTP BOXES */
+.otp-boxes {
+    display: flex;
+    gap: 15px;
+}
+
+.otp-boxes input {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    border: 2px solid #E8306E;
+    text-align: center;
+    font-size: 22px;
+}
+@media (max-width:1024px){
+
+/* CARD */
+.login-box{
+    width:90%;
+    height:auto;
+    padding:40px 20px;
+}
+
+/* TITLE */
+.login-box h1{
+    font-size:36px;
+}
+
+/* INPUT */
+.login-input{
+    width:80%;
+    height:55px;
+    font-size:16px;
+}
+
+/* BUTTON */
+.login-btn{
+    width:80%;
+    height:60px;
+    font-size:22px;
+}
+
+/* OTP */
+.otp-boxes input{
+    width:55px;
+    height:55px;
+}
+
+}
+@media (max-width:768px){
+
+/* BODY */
+body{
+    padding:20px;
+}
+
+/* CARD */
+.login-box{
+    width:100%;
+    border-radius:20px;
+    gap:20px;
+}
+
+/* TITLE */
+.login-box h1{
+    font-size:28px;
+}
+
+/* SUB */
+.login-sub{
+    font-size:16px;
+}
+
+/* INPUT */
+.login-input{
+    width:100%;
+    height:50px;
+    font-size:15px;
+}
+
+/* BUTTON */
+.login-btn{
+    width:100%;
+    height:55px;
+    font-size:20px;
+}
+
+/* OTP BOXES */
+.otp-boxes{
+    gap:10px;
+}
+
+.otp-boxes input{
+    width:45px;
+    height:45px;
+    font-size:18px;
+}
+
+/* CLOSE BTN */
+.close-btn{
+    font-size:22px;
+    top:10px;
+    right:15px;
+}
+
+}
+@media (max-width:480px){
+
+/* TITLE */
+.login-box h1{
+    font-size:22px;
+}
+
+/* HEADER */
+.login-header{
+    font-size:14px;
+}
+
+/* OTP */
+.otp-boxes input{
+    width:40px;
+    height:40px;
+    font-size:16px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <button class="close-btn" onclick="goBack()"><i class="fa-solid fa-xmark"></i></button>
+
+    <div class="login-header">💆 Luxe Salon</div>
+
+    <!-- ================= PHONE SCREEN ================= -->
+    <div id="phoneScreen">
+
+        <h1>World’s Last minute Orders</h1>
+        <p class="login-sub">Login or Sign Up</p>
+
+        <input id="phoneInput" class="login-input" placeholder="Enter Your Phonenumber">
+
+        <button id="continueBtn" class="login-btn">Continue</button>
+
+    </div>
+
+    <!-- ================= OTP SCREEN ================= -->
+    <div id="otpScreen" style="display:none; flex-direction:column; align-items:center; gap:25px;">
+
+        <h1>OTP Verification</h1>
+        <p class="login-sub">Code sent to <span id="userPhone"></span></p>
+
+        <div class="otp-boxes">
+            <input maxlength="1">
+            <input maxlength="1">
+            <input maxlength="1">
+            <input maxlength="1">
+        </div>
+
+        <button id="verifyBtn" class="login-btn">Verify</button>
+
+    </div>
+
+</div>
+
+<script>
+
+// ELEMENTS
+const phoneScreen = document.getElementById("phoneScreen");
+const otpScreen = document.getElementById("otpScreen");
+
+const phoneInput = document.getElementById("phoneInput");
+const continueBtn = document.getElementById("continueBtn");
+const userPhone = document.getElementById("userPhone");
+
+const otpInputs = document.querySelectorAll(".otp-boxes input");
+const verifyBtn = document.getElementById("verifyBtn");
+
+// ===== CONTINUE BUTTON =====
+continueBtn.onclick = () => {
+
+    userPhone.textContent = phoneInput.value;
+
+    phoneScreen.style.display = "none";
+    otpScreen.style.display = "flex";
+
+    otpInputs[0].focus();
+};
+
+// ===== OTP AUTO MOVE =====
+otpInputs.forEach((input, i) => {
+    input.oninput = () => {
+        if (input.value && i < 3) {
+            otpInputs[i + 1].focus();
+        }
+    };
+});
+
+// ===== VERIFY BUTTON =====
+verifyBtn.onclick = () => {
+
+    let otp = "";
+    otpInputs.forEach(i => otp += i.value);
+
+    if (otp === "1234") {
+        alert("Login Successful 🎉");
+
+        // 👉 REDIRECT TO HOME PAGE
+        window.location.href = "index.html";
+    } else {
+        alert("Wrong OTP ❌");
+    }
+};
+
+function goBack() {
+    window.location.href = "index.html";
+}
+
+</script>
+
+</body>
+</html>

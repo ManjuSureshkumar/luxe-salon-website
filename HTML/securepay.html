@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Luxe Salon-Membership-Booking1</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    background: #472430;
+    color: #fff;
+}
+
+/* MAIN CONTAINER */
+.payment-container {
+  width: 100%;
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* SECTION */
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* PAYMENT OPTIONS */
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option {
+    background: #fff;
+    color: #000;
+    padding: 14px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.option:hover {
+    background: #f3f3f3;
+}
+
+/* SUMMARY */
+.summary h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.row span:first-child {
+    color: #E8306E;
+}
+
+.total {
+    font-weight: 700;
+}
+
+/* STRIPE TEXT */
+.secure-text {
+    text-align: center;
+    color: #E8306E;
+    font-size: 14px;
+}
+
+/* BUTTON */
+.pay-btn {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 14px;
+    background: #E8306E;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.pay-btn {
+    transition: all 0.3s ease;
+}
+.pay-btn:hover {
+    background: #d91f5f;
+    transform: scale(1.03);
+}
+.success-page {
+    display: none; /* hidden initially */
+    min-height: 100vh;
+    background: #472430;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-card {
+    width: 100%;
+    max-width: 600px;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* GREEN BOX */
+.tick {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    background: #1ACE80;
+    border-radius: 20px;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TEXT */
+.success-card h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.success-card p {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* DETAILS */
+.details {
+    margin-bottom: 30px;
+}
+
+.details .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #ffffff20;
+}
+
+.details span:first-child {
+    color: #E8306E;
+}
+
+/* BUTTONS */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.primary {
+    background: #E8306E;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.secondary {
+    background: #eee;
+    color: #E8306E;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+@media (max-width:1024px){
+
+/* CONTAINER */
+.payment-container{
+    max-width:90%;
+    margin:100px auto 40px;
+    gap:30px;
+}
+
+/* TITLE */
+.title{
+    font-size:24px;
+}
+
+/* SECTION HEAD */
+.section h2{
+    font-size:20px;
+}
+
+/* BUTTON */
+.pay-btn{
+    max-width:300px;
+}
+
+/* SUCCESS CARD */
+.success-card{
+    max-width:500px;
+    padding:30px 20px;
+}
+
+/* NAVBAR FIX */
+.nav-links{
+    gap:30px;
+    margin-left:0; /* IMPORTANT FIX */
+}
+
+}
+@media (max-width:768px){
+
+/* NAVBAR STACK */
+.navbar{
+    flex-direction:column;
+    align-items:flex-start;
+    height:auto;
+    gap:10px;
+}
+
+.nav-links{
+    flex-direction:column;
+    gap:10px;
+}
+
+/* CONTAINER */
+.payment-container{
+    margin:120px 20px 40px;
+    padding:10px;
+}
+
+/* TITLE */
+.title{
+    font-size:22px;
+}
+
+/* OPTIONS */
+.option{
+    padding:12px 16px;
+    font-size:14px;
+}
+
+/* SUMMARY ROW */
+.row{
+    font-size:14px;
+}
+
+/* BUTTON FULL WIDTH */
+.pay-btn{
+    max-width:100%;
+}
+
+/* SUCCESS PAGE */
+.success-card{
+    width:100%;
+    padding:30px 15px;
+}
+
+/* TICK */
+.tick{
+    width:90px;
+    height:90px;
+    font-size:40px;
+}
+
+/* ACTION BUTTONS STACK */
+.actions{
+    flex-direction:column;
+    gap:10px;
+}
+
+.actions button{
+    width:100%;
+}
+
+}
+@media (max-width:480px){
+
+/* TITLE */
+.title{
+    font-size:20px;
+}
+
+/* SECTION */
+.section h2{
+    font-size:18px;
+}
+
+/* TEXT */
+.secure-text{
+    font-size:12px;
+}
+
+/* SUMMARY */
+.row{
+    flex-direction:column;
+    gap:4px;
+}
+
+/* SUCCESS TEXT */
+.success-card h1{
+    font-size:20px;
+}
+
+.success-card p{
+    font-size:13px;
+}
+
+/* DETAILS */
+.details .row{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:4px;
+}
+
+}
+</style>
+</head>
+<body> 
+
+<div class="navbar">
+
+    <!-- Frame 1707480871 -->
+    <div class="logo">
+        <img src="Images/c.png" alt="spa icon">
+        <span>Luxe Salon</span>
+    </div>
+
+    <!-- Frame 1707480873 -->
+    <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="service.html">Services</a>
+        <a href="membership.html">Membership</a>
+    </div>
+
+    <!-- RIGHT: PROFILE IMAGE -->
+    <div class="profile"><a href="profile.html">
+        <img src="Images/profile.jpg" alt="profile"></a>
+    </div>
+</div>
+
+<div class="payment-container">
+
+    <h1 class="title">Secure Payment</h1>
+
+    <!-- PAYMENT METHOD -->
+    <div class="section">
+        <h2>Payment Method</h2>
+
+        <div class="payment-options">
+            <div class="option">Credit / Debit Card</div>
+            <div class="option">UPI Payment</div>
+        </div>
+    </div>
+
+    <!-- AMOUNT SUMMARY -->
+    <div class="section summary">
+        <h3>Amount Summary</h3>
+
+        <div class="row">
+            <span>Subtotal</span>
+            <span>$120</span>
+        </div>
+
+        <div class="row">
+            <span>Taxes</span>
+            <span>$10</span>
+        </div>
+
+        <div class="row total">
+            <span>Total</span>
+            <span>$130</span>
+        </div>
+    </div>
+
+    <p class="secure-text">Secure payment powered by Stripe</p>
+
+    <button class="pay-btn">Pay & Confirm Booking</button>
+
+</div>
+
+<!-- SUCCESS SCREEN -->
+<div id="successPage" class="success-page">
+
+    <div class="success-card">
+
+        <div class="tick">✔</div>
+
+        <h1>Appointment Booked Successfully</h1>
+        <p>Your appointment has been successfully booked.</p>
+
+        <div class="details">
+            <div class="row">
+                <span>Booking ID</span>
+                <span>#123456</span>
+            </div>
+
+            <div class="row">
+                <span>Service</span>
+                <span>Haircut & Style</span>
+            </div>
+
+            <div class="row">
+                <span>Stylist</span>
+                <span>Ava Harper</span>
+            </div>
+
+            <div class="row">
+                <span>Date & Time</span>
+                <span>July 20, 2024, 2:00 PM</span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="primary">View My Bookings</button>
+            <button class="secondary" onclick="goHome()">Back to Home</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

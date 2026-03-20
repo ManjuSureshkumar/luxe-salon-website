@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Luxe Salon-Membership</title>
+<link href="https://fonts.googleapis.com" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main">
+
+<div class="navbar">
+
+    <!-- Frame 1707480871 -->
+    <div class="logo">
+        <img src="Images/c.png" alt="spa icon">
+        <span>Luxe Salon</span>
+    </div>
+
+    <!-- Frame 1707480873 -->
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="service.html">Services</a>
+        <a href="membership.html"class="active">Membership</a>
+    </div>
+
+    <!-- RIGHT: PROFILE IMAGE -->
+    <div class="profile"><a href="profile.html">
+        <img src="Images/profile.jpg" alt="profile"></a>
+    </div>
+
+</div>
+
+<!-- HERO (ONLY ONE SYSTEM) -->
+<div class="hero hero-membership">
+    <h1>Become a Salon Member & Save More</h1>
+    <p>Unlock exclusive benefits, significant discounts on all services, 
+      and priority booking. Elevate your salon experience with our 
+      membership plans..</p>
+
+    <div class="hero-buttons">
+        <a href="#" class="btn-primary">Join Membership</a>
+    </div>
+</div>
+
+<!-- MEMBERSHIP CONTENT -->
+<div class="membership-container">
+
+    <h2 class="section-title">Membership Plans</h2>
+
+    <div class="plans">
+
+        <!-- SILVER -->
+        <div class="plan-card silver">
+            <h3>Silver Plan - Monthly</h3>
+
+            <div class="price">
+                <span class="amount">$49</span>
+                <span class="duration">/month</span>
+            </div>
+
+            <button class="plan-btn" onclick="window.location.href='plan.html'">Select Plan</button>
+
+            <ul class="features">
+                <li>10% off all services</li>
+                <li>1 free add-on service per month</li>
+                <li>Priority booking</li>
+            </ul>
+        </div>
+
+        <!-- GOLD -->
+        <div class="plan-card gold">
+            <div class="top-row">
+                <h3>Gold Plan - Quarterly</h3>
+                <span class="badge">Most Popular</span>
+            </div>
+
+            <div class="price">
+                <span class="amount">$129</span>
+                <span class="duration">/quarter</span>
+            </div>
+
+            <button class="plan-btn" onclick="window.location.href='plan.html'">Select Plan</button>
+
+            <ul class="features">
+                <li>15% off all services</li>
+                <li>2 free add-on services per quarter</li>
+                <li>Priority booking</li>
+            </ul>
+        </div>
+
+        <!-- PLATINUM -->
+        <div class="plan-card platinum">
+            <h3>Platinum Plan - Yearly</h3>
+
+            <div class="price">
+                <span class="amount">$399</span>
+                <span class="duration">/year</span>
+            </div>
+
+            <button class="plan-btn" onclick="window.location.href='plan.html'">Select Plan</button>
+
+            <ul class="features">
+                <li>20% off all services</li>
+                <li>4 free add-on services per year</li>
+                <li>Priority booking</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="membership-container">
+
+    <!-- TITLE -->
+    <h2 class="section-title">Plan Comparison</h2>
+
+    <!-- TABLE -->
+    <div class="comparison-box">
+
+        <!-- HEADER -->
+        <div class="comparison-row header">
+            <div>Benefit</div>
+            <div>Silver Plan</div>
+            <div>Gold Plan</div>
+            <div>Platinum Plan</div>
+        </div>
+
+        <!-- ROW 1 -->
+        <div class="comparison-row">
+            <div>Discount on Services</div>
+            <div>10%</div>
+            <div>15%</div>
+            <div>20%</div>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="comparison-row">
+            <div>Free Add-on Services</div>
+            <div>1 per month</div>
+            <div>2 per quarter</div>
+            <div>4 per year</div>
+        </div>
+
+        <!-- ROW 3 -->
+        <div class="comparison-row">
+            <div>Priority Booking</div>
+            <div>Included</div>
+            <div>Included</div>
+            <div>Included</div>
+        </div>
+
+    </div>
+</div>
+
+<div class="membership-container">
+
+    <!-- TITLE -->
+    <h2 class="section-title">How Membership Works</h2>
+
+    <!-- STEPS -->
+    <div class="steps">
+
+        <!-- STEP 1 -->
+        <div class="step">
+            <div class="step-icon"><i class="fa-solid fa-arrow-pointer"></i></div>
+            <div class="step-content">
+                <h4>Choose Your Plan</h4>
+                <p>Select the membership plan that best suits your needs and preferences.</p>
+            </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step">
+            <div class="step-icon"><i class="fa-regular fa-credit-card"></i></div>
+            <div class="step-content">
+                <h4>Pay</h4>
+                <p>Complete the payment process to activate your membership.</p>
+            </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step">
+            <div class="step-icon"><i class="fa-regular fa-star"></i></div>
+            <div class="step-content">
+                <h4>Enjoy Benefits</h4>
+                <p>Start enjoying exclusive discounts, free add-ons, and priority booking.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="membership-container">
+
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq">
+
+        <!-- ITEM 1 -->
+        <div class="faq-item active">
+            <div class="faq-question">
+                <span>How long is my membership valid?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Your membership is valid for the duration of the selected plan: monthly, quarterly, or yearly. It automatically renews unless canceled.
+            </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Can I cancel my membership?</span>
+               <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Yes, you can cancel anytime before the next billing cycle.
+            </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Do you offer refunds?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Refunds are not available once the membership is activated.
+            </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What are the rules for using my membership benefits?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Benefits can be used during the active period and are subject to salon terms and availability.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="membership-container">
+
+    <h2 class="section-title">Member Testimonials</h2>
+
+    <div class="testimonials">
+
+        <!-- CARD 1 -->
+        <div class="testimonial-card">
+            <div class="user">
+                <div class="avatar"></div>
+                <div>
+                    <h4>Sophia Bennett</h4>
+                    <span>2 months ago</span>
+                </div>
+            </div>
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "I love my Silver Plan! The discounts are fantastic, and I always get my preferred appointment times. It's a game-changer for regular salon visits."
+            </p>
+
+            <div class="actions">
+                <span>👍 15</span>
+                <span>💬 2</span>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="testimonial-card">
+            <div class="user">
+                <div class="avatar"></div>
+                <div>
+                    <h4>Olivia Carter</h4>
+                    <span>4 months ago</span>
+                </div>
+            </div>
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "The Gold Plan is perfect for me. The quarterly free add-ons are a great bonus, and the priority booking ensures I never miss out on my favorite stylist."
+            </p>
+
+            <div class="actions">
+                <span>👍 12</span>
+                <span>💬 1</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="cta lg">
+
+    <h1>Start Saving Today</h1>
+    <div class="cta-buttons">
+        <a href="membership.html" class="btn-outline btn-md">Get Membership</a>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <!-- LEFT (LOGO + SOCIAL) -->
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="Images/c.png" alt="logo">
+                <span>Luxe Salon</span>
+            </div>
+
+            <div class="socials">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMNS -->
+        <div class="footer-right">
+
+            <div class="footer-col">
+                <h4>Terms & Policies</h4>
+                <p>Terms of Service</p>
+                <p>Privacy Policy</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Home</h4>
+                <p>Service</p>
+                <p>Membership</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>(+234) 8089466435</p>
+                <p>agencycr@gmail.com</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="footer-divider"></div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        Copyright, Luxe Salon 2022. All rights reserved.
+    </div>
+
+</footer>
+
+</div>
+
+</body>
+</html>

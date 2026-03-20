@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Luxe Salon-Membership-Plan</title>
+<link href="https://fonts.googleapis.com" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+    /* MAIN WRAPPER */
+.profile-container{
+  max-width:960px;
+  margin-top:40px;     /* only top space */
+  margin:40px auto;   /* move to left */
+  margin-right:0;
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+  padding-top: 0px;
+    padding-left:40px;
+}
+
+/* HEADER */
+.profile-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px;
+}
+
+/* LEFT PROFILE */
+.profile-left{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.profile-pic{
+  width:128px;
+  height:128px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.profile-info{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.profile-info h2{
+  margin:0;
+  font-size:22px;
+}
+
+.profile-info p{
+  margin-top:5px;
+  color:#E8306E;
+}
+
+/* TABS */
+.profile-tabs{
+  border-bottom:1px solid #DBCFE8;
+  padding:0 16px;
+}
+
+.profile-tabs span{
+ padding-bottom:8px;
+  border-bottom:2px solid #fff;
+  font-weight:700;
+  display:inline-block;
+}
+/* BOOKING CARD */
+.booking-card{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:16px;
+  border-radius:8px;
+  align-items:flex-start;
+}
+
+/* LEFT SIDE */
+.booking-left{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  flex:1;
+}
+
+/* TEXT */
+.booking-id{
+  color:#E8306E;
+  font-size:14px;
+}
+
+.booking-left h3{
+  margin:0;
+  font-size:16px;
+}
+
+.booking-details{
+  color:#E8306E;
+  font-size:14px;
+}
+
+/* BUTTON */
+.booking-btn{
+  margin-top:10px;
+  width:120px;
+  height:32px;
+  border:1px solid #E8306E;
+  background:#EDE8F2;
+  color:#E8306E;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* RIGHT IMAGE */
+.booking-img{
+  width:100%;
+  max-width:300px;
+  height:170px;
+  border-radius:8px;
+  object-fit:cover;
+}
+@media (max-width:1024px){
+
+/* CONTAINER FIX */
+.profile-container{
+    max-width:90%;
+    margin:40px auto;
+    padding-left:0;
+}
+
+/* HEADER */
+.profile-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+}
+
+/* BOOKING CARD */
+.booking-card{
+    flex-direction:column;
+    gap:15px;
+}
+
+/* IMAGE */
+.booking-img{
+    width:100%;
+    height:200px;
+}
+
+}
+@media (max-width:768px){
+
+/* NAVBAR STACK */
+.navbar{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.nav-links{
+    flex-direction:column;
+    gap:10px;
+}
+
+/* PROFILE */
+.profile-left{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+/* PROFILE IMAGE */
+.profile-pic{
+    width:90px;
+    height:90px;
+}
+
+/* TEXT */
+.profile-info h2{
+    font-size:18px;
+}
+
+.profile-info p{
+    font-size:14px;
+}
+
+/* TABS */
+.profile-tabs{
+    padding:0;
+}
+
+/* BOOKING */
+.booking-left h3{
+    font-size:15px;
+}
+
+.booking-details{
+    font-size:13px;
+}
+
+/* BUTTON */
+.booking-btn{
+    width:100%;
+}
+
+/* IMAGE */
+.booking-img{
+    height:180px;
+}
+
+}
+@media (max-width:480px){
+
+/* CONTAINER */
+.profile-container{
+    margin:20px;
+}
+
+/* TEXT */
+.profile-info h2{
+    font-size:16px;
+}
+
+.profile-info p{
+    font-size:12px;
+}
+
+/* BOOKING TEXT */
+.booking-id{
+    font-size:12px;
+}
+
+.booking-details{
+    font-size:12px;
+}
+
+/* IMAGE */
+.booking-img{
+    height:150px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+<div class="navbar">
+
+    <!-- Frame 1707480871 -->
+    <div class="logo">
+        <img src="Images/c.png" alt="spa icon">
+        <span>Luxe Salon</span>
+    </div>
+
+    <!-- Frame 1707480873 -->
+    <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="service.html">Services</a>
+        <a href="membership.html">Membership</a>
+    </div>
+
+    <!-- RIGHT: PROFILE IMAGE -->
+    <div class="profile">
+        <img src="Images/profile.jpg" alt="profile">
+    </div>
+</div>
+
+<div class="profile-container">
+
+  <!-- HEADER -->
+  <div class="profile-header">
+
+    <div class="profile-left">
+      <img src="Images/profile.jpg" class="profile-pic">
+
+      <div class="profile-info">
+        <h2>Sophia Bennett</h2>
+        <p>sophia.bennett@email.com</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TAB -->
+  <div class="profile-tabs">
+    <span>Upcoming Bookings</span>
+  </div>
+
+  <!-- CARD 1 -->
+  <div class="booking-card">
+
+    <div class="booking-left">
+      <p class="booking-id">Booking ID: #12345</p>
+      <h3>Haircut & Style</h3>
+      <p class="booking-details">
+        Date: July 15, 2024 · Time: 2:00 PM · Stylist: Emily Carter · Status: Confirmed
+      </p>
+
+      <button class="booking-btn">Cancel</button>
+    </div>
+
+    <img src="Images/pr.jpg" class="booking-img">
+
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="booking-card">
+
+    <div class="booking-left">
+      <p class="booking-id">Booking ID: #67890</p>
+      <h3>Manicure</h3>
+      <p class="booking-details">
+        Date: July 20, 2024 · Time: 10:00 AM · Stylist: Olivia Davis · Status: Confirmed
+      </p>
+
+      <button class="booking-btn">Reschedule</button>
+    </div>
+
+    <img src="Images/pr2.jpg" class="booking-img">
+
+  </div>
+
+</div>
+</div>
+</body>
+</html>

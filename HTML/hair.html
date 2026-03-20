@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Luxe Salon-Services-Hair</title>
+<link href="https://fonts.googleapis.com" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main">
+
+<div class="navbar">
+
+    <!-- Frame 1707480871 -->
+    <div class="logo">
+        <img src="Images/c.png" alt="spa icon">
+        <span>Luxe Salon</span>
+    </div>
+
+    <!-- Frame 1707480873 -->
+    <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="service.html">Services</a>
+        <a href="membership.html">Membership</a>
+    </div>
+
+    <!-- RIGHT: PROFILE IMAGE -->
+    <div class="profile"><a href="profile.html">
+        <img src="Images/profile.jpg" alt="profile"></a>
+    </div>
+
+</div>
+
+<!-- HERO (ONLY ONE SYSTEM) -->
+<div class="hero hero-hair">
+    <h1>Hair Cut & Hair Care Services</h1>
+    <p>Experience the latest trends and professional styling with our expert team.
+        Book your appointment today for a fresh new look.</p>
+
+    <div class="hero-buttons">
+        <a href="booking1.html" class="btn-primary">Book Appointment</a>
+        <a href="membership.html" class="btn-primary">Get Membership</a>
+    </div>
+</div>  
+  
+
+<!--Filter-Bar-->
+<h2 class="section-title"> Filter Services</h2>
+
+<div class="filter-bar">
+    <div class="filter-chip" onclick="filterServices('women', this)">Women</div>
+    <div class="filter-chip" onclick="filterServices('men', this)">Men</div>
+    <div class="filter-chip" onclick="filterServices('kids', this)">Kids</div>
+    <div class="filter-chip active" onclick="filterServices('all', this)">All</div>
+</div>
+
+<div class="services-section">
+  <div class="services-row">
+    
+    <!-- Card -->
+    <div class="services-card women">
+      <div class="services-img">
+        <img src="Images/w-hair1.jpg" alt="Women's Hair cut">
+      </div>
+      <div class="services-text">
+        <h3>Women's Hair Cut</h3>
+        <p>Trendy cuts tailored to your style</p>
+      </div>
+    </div>
+
+    <div class="services-card men">
+      <div class="services-img">
+        <img src="Images/w-hair2.jpg" alt="Men's Hair cut"></div>
+      <div class="services-text">
+        <h3>Men's Hair Cut</h3>
+        <p>Precision cuts for a sharp look</p>
+      </div>
+    </div>
+
+    <div class="services-card kids">
+      <div class="services-img">
+        <img src="Images/w-hair3.jpg" alt="Kid's Hair cut">
+      </div>
+      <div class="services-text">
+        <h3>Kids Hair Cut</h3>
+        <p>Fun and safe cuts for the little ones</p>
+      </div>
+    </div>
+
+    <div class="services-card women">
+      <div class="services-img">
+        <img src="Images/w-hair4.jpg" alt=" Hair style">
+      </div>
+      <div class="services-text">
+        <h3>Hair Styling</h3>
+        <p>Styling for any occasion</p>
+      </div>
+    </div>
+
+    <div class="services-card women">
+      <div class="services-img">
+        <img src="Images/w-hair5.jpg" alt="Women's Hair color">
+    </div>
+      <div class="services-text">
+        <h3>Hair Coloring</h3>
+        <p>Vibrant colors and highlights</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="services-row women">
+
+    <div class="services-card">
+      <div class="services-img">
+        <img src="Images/w-hair6.jpg" alt="Hair spa">
+      </div>
+      <div class="services-text">
+        <h3>Hair Spa</h3>
+        <p>Relaxing treatments for healthy hair</p>
+      </div>
+    </div>
+
+    <div class="services-card women">
+      <div class="services-img">
+        <img src="Images/w-hair7.jpg" alt="Hair straigtening">
+      </div>
+      <div class="services-text">
+        <h3>Hair Straightening</h3>
+        <p>Sleek and straight hair</p>
+      </div>
+    </div>
+
+    <div class="services-card women">
+      <div class="services-img">
+        <img src="Images/w-hair8.jpg" alt="Hair smoothening"></div>
+      <div class="services-text">
+        <h3>Hair Smoothening</h3>
+        <p>Smooth and manageable hair</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="stylists-section">
+
+  <h2 class="section-title">Featured Stylists</h2>
+
+  <div class="stylists-row">
+
+    <!-- Stylist 1 -->
+    <div class="stylist-card">
+      <div class="stylist-img">
+        <img src="images/f1.jpg" alt="Sophia Bennett">
+      </div>
+      <h3>Sophia Bennett</h3>
+      <p>Specializes in women's cuts and styling</p>
+    </div>
+
+    <!-- Stylist 2 -->
+    <div class="stylist-card">
+      <div class="stylist-img">
+        <img src="images/f2.jpg" alt="Ethan Carter">
+      </div>
+      <h3>Ethan Carter</h3>
+      <p>Expert in men's grooming and trends</p>
+    </div>
+
+    <!-- Stylist 3 -->
+    <div class="stylist-card">
+      <div class="stylist-img">
+        <img src="images/f3.jpg" alt="Olivia Harper">
+      </div>
+      <h3>Olivia Harper</h3>
+      <p>Coloring and treatment specialist</p>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="trending-section">
+
+  <h2 class="section-title">Trending Hairstyles</h2>
+
+  <div class="trending-row">
+
+    <!-- Card 1 -->
+    <div class="trend-card">
+      <div class="trend-img">
+        <img src="images/c1.jpg" alt="Bob Cut">
+      </div>
+      <h3>Bob Cut</h3>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="trend-card">
+      <div class="trend-img">
+        <img src="images/c2.jpg" alt="Layered Hair">
+      </div>
+      <h3>Layered Hair</h3>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="trend-card">
+      <div class="trend-img">
+        <img src="images/c3.jpg" alt="Pixie Cut">
+      </div>
+      <h3>Pixie Cut</h3>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="reviews-section">
+
+  <h2 class="section-title">Customer Reviews</h2>
+
+  <!-- Review 1 -->
+  <div class="review-card">
+    <div class="review-header">
+      <img src="images/f1.jpg" alt="Ava Thompson" class="avatar">
+      <div>
+        <h3>Ava Thompson</h3>
+        <span>1 month ago</span>
+      </div>
+    </div>
+
+    <div class="stars">★★★★★</div>
+
+    <p>Sophia gave me the best haircut I've ever had! She really understood what I wanted and the result was amazing.</p>
+  </div>
+
+  <!-- Review 2 -->
+  <div class="review-card">
+    <div class="review-header">
+      <img src="images/f2.jpg" alt="Liam Davis" class="avatar">
+      <div>
+        <h3>Liam Davis</h3>
+        <span>2 months ago</span>
+      </div>
+    </div>
+
+    <div class="stars">★★★★☆</div>
+
+    <p>Ethan is a great stylist. He gave me a stylish and modern haircut, but it was a bit pricey.</p>
+  </div>
+
+  <!-- Review 3 -->
+  <div class="review-card">
+    <div class="review-header">
+      <img src="images/f3.jpg" alt="Chloe Wilson" class="avatar">
+      <div>
+        <h3>Chloe Wilson</h3>
+        <span>3 months ago</span>
+      </div>
+    </div>
+
+    <div class="stars">★★★★★</div>
+
+    <p>Olivia transformed my hair with a beautiful color treatment. I highly recommend her!</p>
+  </div>
+
+</div>
+    
+<div class="cta lg">
+
+    <h1>Book Your Perfect Salon Appointment</h1>
+
+    <p>
+        Experience the ultimate in beauty and relaxation with our expert team 
+        and luxurious treatments.
+    </p>
+
+    <div class="cta-buttons">
+        <a href="booking1.html" class="btn-primary btn-md">Book Appointment</a>
+        <a href="membership.html" class="btn-outline btn-md">Get Membership</a>
+    </div>
+
+</div>
+
+
+
+
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <!-- LEFT (LOGO + SOCIAL) -->
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="Images/c.png" alt="logo">
+                <span>Luxe Salon</span>
+            </div>
+
+            <div class="socials">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMNS -->
+        <div class="footer-right">
+
+            <div class="footer-col">
+                <h4>Terms & Policies</h4>
+                <p>Terms of Service</p>
+                <p>Privacy Policy</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Home</h4>
+                <p>Service</p>
+                <p>Membership</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>(+234) 8089466435</p>
+                <p>agencycr@gmail.com</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="footer-divider"></div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        Copyright, Luxe Salon 2022. All rights reserved.
+    </div>
+
+</footer>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

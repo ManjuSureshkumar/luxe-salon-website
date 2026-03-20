@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Luxe Salon-Membership-Plan</title>
+<link href="https://fonts.googleapis.com" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main">
+
+<div class="navbar">
+
+    <!-- Frame 1707480871 -->
+    <div class="logo">
+        <img src="Images/c.png" alt="spa icon">
+        <span>Luxe Salon</span>
+    </div>
+
+    <!-- Frame 1707480873 -->
+    <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="service.html">Services</a>
+        <a href="membership.html">Membership</a>
+    </div>
+
+    <!-- RIGHT: PROFILE IMAGE -->
+    <div class="profile"><a href="profile.html">
+        <img src="Images/profile.jpg" alt="profile"></a>
+    </div>
+</div>
+
+<div class="checkout-container">
+
+  <!-- TITLE -->
+  <h1 class="checkout-title">Checkout</h1>
+
+  <!-- MEMBERSHIP -->
+  <h2 class="checkout-section">Membership Plan</h2>
+
+  <div class="checkout-membership">
+    <div class="checkout-membership-text">
+      <h3>Gold Membership</h3>
+      <p>Enjoy exclusive benefits and discounts on all services.</p>
+    </div>
+
+    <!-- FIXED IMAGE -->
+    <img src="Images/gold.jpg" alt="Gold Card">
+  </div>
+
+  <!-- PAYMENT -->
+  <h2 class="checkout-section">Payment Method</h2>
+
+  <div class="checkout-payment">
+
+    <!-- CARD OPTION -->
+    <div class="payment-option" onclick="toggleCard(true)">
+      Credit / Debit Card
+    </div>
+
+    <!-- CARD FORM (NEW) -->
+    <div id="cardBox" class="card-box">
+      <div class="card-header">
+        <i class="fa-solid fa-credit-card"></i>
+        Credit / Debit Card
+      </div>
+
+      <input type="text" placeholder="Card Number">
+      <input type="text" placeholder="Cardholder Name">
+
+      <div class="row">
+        <input type="text" placeholder="Expiry Date">
+        <input type="text" placeholder="CVV">
+      </div>
+    </div>
+
+    <!-- UPI -->
+    <div class="payment-option" onclick="toggleCard(false)">
+      UPI Payment
+    </div>
+
+  </div>
+
+  <!-- SECURE TEXT -->
+  <p class="checkout-secure">Secure payment. Your data is protected.</p>
+
+  <!-- BUTTON -->
+  <button class="checkout-btn" onclick="activateMembership()">Pay & Activate Membership</button>
+
+</div>
+
+<!-- SUCCESS POPUP -->
+<div id="successOverlay" class="success-overlay">
+
+  <div class="success-box-popup">
+
+    <h2>Membership Activated</h2>
+
+    <p>
+      Your membership is now active and ready to use. Enjoy the benefits!
+    </p>
+
+    <div class="success-row">
+
+      <div class="info">
+        <span>Membership ID</span>
+        <strong id="memberId">#1234567890</strong>
+      </div>
+
+      <div class="info">
+        <span>Valid Until</span>
+        <strong>December 31, 2024</strong>
+      </div>
+
+      <button onclick="goHome()">Go to Home</button>
+
+    </div>
+
+  </div>
+
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
